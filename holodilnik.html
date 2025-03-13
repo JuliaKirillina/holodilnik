@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Холодильник</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff6f61;
+    }
+    .fridge {
+      background-color: #fff;
+      border: 2px solid #ff6f61;
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 50%;
+    }
+    .fridge ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .fridge li {
+      margin: 10px 0;
+    }
+    button {
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #ff4a3d;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Холодильник</h1>
+  <div class="fridge">
+    <h2>Продукты в холодильнике</h2>
+    <ul id="productList">
+      <li>Яйца</li>
+      <li>Молоко</li>
+      <li>Картофель</li>
+    </ul>
+  </div>
+  <button onclick="checkIngredients()">Проверить ингредиенты</button>
+  <p id="errorMessage" class="error"></p>
+
+  <script>
+    function checkIngredients() {
+      const products = ["яйца", "молоко", "картофель"]; // Список продуктов в холодильнике
+      const recipe = ["яйца", "молоко", "соль"]; // Ингредиенты для выбранного блюда (например, омлет)
+
+      const missing = recipe.filter(ingredient => !products.includes(ingredient));
+
+      if (missing.length > 0) {
+        document.getElementById("errorMessage").textContent = Я не могу приготовить это блюдо, так как нет: ${missing.join(", ")}.;
+      } else {
+        document.getElementById("errorMessage").textContent = "Все ингредиенты есть! Можно готовить!";
+      }
+    }
+  </script>
+</body>
+</html>
