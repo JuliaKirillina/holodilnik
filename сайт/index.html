@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Меню ужинов для Радика</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      text-align: center;
+      padding: 20px;
+    }
+    h1 {
+      color: #ff6f61;
+    }
+    .menu {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 30px;
+    }
+    .menu-section {
+      background-color: #fff;
+      border: 2px solid #ff6f61;
+      border-radius: 10px;
+      padding: 20px;
+      width: 30%;
+    }
+    .menu-section h2 {
+      color: #ff6f61;
+    }
+    .menu-section ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    .menu-section li {
+      margin: 10px 0;
+    }
+    button {
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #ff4a3d;
+    }
+  </style>
+</head>
+<body>
+  <h1>МЕНЮ УЖИНОВ ДЛЯ РАДИКА</h1>
+  <p>Добро пожаловать в твое личное меню! Здесь ты можешь заказать ужин. Просто выбирай, что душе угодно, а я постараюсь сделать так, чтобы у тебя не было поноса!</p>
+  <button onclick="window.location.href='holodilnik.html'">Перейти к холодильнику</button>
+
+  <div class="menu">
+    <div class="menu-section">
+      <h2>Простые блюда</h2>
+      <ul>
+        <li><a href="#рис">1.1. Рис</a></li>
+        <li><a href="#макароны">1.2. Макароны</a></li>
+        <li><a href="#картошка">1.3. Картошка</a></li>
+        <li><a href="#гречка">1.4. Гречка</a></li>
+        <li><a href="#суп">1.5. Суп</a></li>
+      </ul>
+    </div>
+    <div class="menu-section">
+      <h2>Мучное</h2>
+      <ul>
+        <li><a href="#сладкое">2.1. Сладкое</a></li>
+        <li><a href="#соленое">2.2. Соленое</a></li>
+      </ul>
+    </div>
+    <div class="menu-section">
+      <h2>Сложные блюда</h2>
+      <ul>
+        <li><a href="#эксперименты">3.1. Эксперименты</a></li>
+      </ul>
+    </div>
+  </div>
+</body>
+</html>
